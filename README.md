@@ -52,3 +52,5 @@ Setup instructions:
 	You'll then need to add a regkey to your database:
 		HKEY_CURRENT_USER\Software\ODBC\ODBC.INI\SequeLink_ODBC
 		DatabaseName	REG_SZ	<database_name>
+		
+	Run 'bundle install' from the EduMine directory to install ruby dependencies (gems)
