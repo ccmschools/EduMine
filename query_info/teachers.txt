@@ -1,0 +1,1 @@
+Selects all teachers and their contact records
