@@ -1,5 +1,5 @@
 
-Edumine
+EduMine
 =======
 
 Description: 
