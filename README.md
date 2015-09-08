@@ -42,12 +42,10 @@ Setup instructions:
 	and obtain ODBC access permissions, details, and purchase an ODBC driver from 
 	one of their partners (there's a 15 day trial on the driver).
 	
-	Once you have installed the SequeLink ODBC driver, you have to set 
-	some environment variables.
-	
-	On Windows you can set these through the command line:
-		setx EDUMATE_USERNAME <username>
-		setx EDUMATE_PASSWORD <password>
+	Once you have installed the SequeLink ODBC driver, you have to
+	set up your config file (config.yml). Simply open it and replace
+	the appropriate values. Be sure to place the file in a .gitignore
+	file to prevent committing sensitive data.
 		
 	You'll then need to add a regkey to your database:
 		HKEY_CURRENT_USER\Software\ODBC\ODBC.INI\SequeLink_ODBC

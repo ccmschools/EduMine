@@ -1,0 +1,3 @@
+edumate_username: username
+edumate_password: password
+database_driver: SequeLink_ODBC

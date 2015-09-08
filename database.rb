@@ -1,6 +1,9 @@
 # Author: 	Scott Willett
 # Version: 	2:45 PM 8/09/2015
 
+# Configuration file markup language
+require_relative 'config.rb'
+
 module Database
 
 	# To prevent error messages from the DBI gem (various constant initialization warnings)
@@ -15,10 +18,12 @@ module Database
 	# Connect to the database and suppress warning messages. Return the database connection object.
 	def connect
 	
+		config = EdumineConfig.new
+	
 		suppress_warnings do
 			require 'DBI' 
 			# Create an ODBC connection instance using SequeLink_ODBC.
-			return DBI.connect('DBI:ODBC:SequeLink_ODBC', ENV['EDUMATE_USERNAME'], ENV['EDUMATE_PASSWORD'])
+			return DBI.connect("DBI:ODBC:#{config.database_driver}", config.edumate_username, config.edumate_password)
 		end
 	end
 
