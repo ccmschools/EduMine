@@ -69,7 +69,7 @@ module Database
 	
 		db_connection = connect
 	
-		unless tables[0] == nil
+		unless tables[0] == nil || tables[0].empty?
 		
 			begin
 				tables[0].each do |table|
