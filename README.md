@@ -2,17 +2,33 @@
 Edumine
 =======
 
-Author: 	Scott Willett
-Version: 	1:43 PM 8/09/2015
-
 Description: 
 
-	Run queries against your Edumate database
+	Allows you to run queries against your hosted Edumate database.
 
 Usage:
 
 	Command Line Query:
-	ruby edumine.rb select 'select * from table'
+		ruby edumine.rb query 'select * from table'
 
-	Run a query file (eg: file 'queries\test.sql')
-	ruby edumine.rb select test
+	Run a query from a file file (eg: file 'queries\test.sql')
+		ruby edumine.rb query test
+		
+	View the details of a query file (stored under the query_info directory eg: 'query_info\test.txt')
+		ruby edumine.rb query_info test
+	
+	List all table names
+		ruby edumine.rb tables
+		
+	List specific tables and their columns
+		ruby edumine.rb tables table_1 table_2 table_3 ...
+		
+Setup instructions:
+
+	To obtain access to your hosted Edumate database, you'll need to contact Hobsons and obtain ODBC access permissions, details, and purchase an ODBC driver from one of their partners (there's a 15 day trial on the driver).
+	
+	Once you have installed the SequeLink ODBC driver, you have to set some environment variables.
+	
+	On Windows:
+		setx EDUMATE_USERNAME <username>
+		setx EDUMATE_PASSWORD <password>
