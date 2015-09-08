@@ -5,6 +5,13 @@ Edumine
 Description: 
 
 	Allows you to run queries against your hosted Edumate database.
+	
+	All data is returned in a *.csv format which you can pipe into a file.
+	
+	You can run *.sql files against the database.
+	
+	There are some helpers to document your queries, 
+	list tables in your database, and list specific tables and their columns.
 
 Usage:
 
