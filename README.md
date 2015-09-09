@@ -15,6 +15,9 @@ Description:
 
 Usage:
 
+	EduMine CLI (a CLI to run multiple commands and not type 'ruby edumine.rb' every time)
+		ruby edumine-cli.rb
+
 	Command Line Query:
 		ruby edumine.rb query 'select * from table'
 
@@ -45,10 +48,11 @@ Setup instructions:
 	Once you have installed the SequeLink ODBC driver, you have to
 	set up your config file (config.yml). Simply open it and replace
 	the appropriate values. Be sure to place the file in a .gitignore
-	file to prevent committing sensitive data.
+	file to prevent committing sensitive data in the future.
 		
 	You'll then need to add a regkey to your database:
 		HKEY_CURRENT_USER\Software\ODBC\ODBC.INI\SequeLink_ODBC
 		DatabaseName	REG_SZ	<database_name>
 		
 	Run 'bundle install' from the EduMine directory to install ruby dependencies (gems)
+	
