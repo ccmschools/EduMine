@@ -11,7 +11,7 @@
 # http://www.tutorialspoint.com/ruby/ruby_database_access.htm
 
 # A module that interacts with the database
-require_relative 'database.rb'
+require_relative 'modules/database.rb'
 include Database
 
 # Determines if the program is in command line interface mode. If it is, act like a CLI
@@ -35,7 +35,7 @@ loop do
 		when 'query'
 			Database.query(input[1])
 		# View information about an SQL query if the first arg is 'query_info'
-		when 'query_info'
+		when 'info'
 			Database.query_info(input[1])
 		# List all tables in the database, or specific columns in a table if specified with the 'tables' arg
 		when 'tables'

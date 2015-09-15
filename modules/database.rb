@@ -2,7 +2,7 @@
 # Version: 	2:45 PM 8/09/2015
 
 # Configuration file markup language
-require_relative 'config.rb'
+require_relative '../classes/config.rb'
 
 # Functions that interact with the database are found here, along with a few helpers
 module Database
@@ -73,12 +73,12 @@ module Database
 	def query_info(query)
 	
 		# If the query param matches the name of a text file in the query_info directory, output the info
-		if File.file?("query_info\\#{query}.txt")
-			file = File.open("query_info\\#{query}.txt")
+		if File.file?("queries\\#{query}.txt")
+			file = File.open("queries\\#{query}.txt")
 			puts file.read
 		else
 			# If there's no query_info above, output an error
-			puts "No info found at: query_info\\#{query}.txt"
+			puts "No info found at: queries\\#{query}.txt"
 		end
 	end
 	
