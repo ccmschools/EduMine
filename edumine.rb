@@ -33,7 +33,7 @@ loop do
 	case input[0]
 		# Run an SQL query if the first arg is 'query'
 		when 'query'
-			Database.query(input[1])
+			Database.query(input[1], input[2..input.length])
 		# View information about an SQL query if the first arg is 'query_info'
 		when 'info'
 			Database.query_info(input[1])

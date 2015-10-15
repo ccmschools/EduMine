@@ -16,20 +16,20 @@ Description:
 Usage:
 
 	EduMine CLI (a CLI to run multiple commands and not type 'ruby edumine.rb' every time)
-		ruby edumine-cli.rb
+		ruby edumine.rb
 
 	Command Line Query:
 		ruby edumine.rb query 'select * from table'
 
-	Run a query from a file file (eg: file 'queries\test.sql')
+	Run a query from a file (eg: file 'queries\test.sql')
 		ruby edumine.rb query test
+    
+  Run a query from a file with parameters (variables prefixed with '@' in sql scripts with the index of the parameter [starting at 0]
+  (eg: file queries\test.sql has query 'select @0 from @1)
+    ruby edumine.rb query test * student
 		
 	Parse any output to a CSV file
 		ruby edumine query test >> c:\mydirectory\myfile.csv
-		
-	View the details of a query file 
-	(stored under the query_info directory eg: 'query_info\test.txt')
-		ruby edumine.rb query_info test
 	
 	List all table names
 		ruby edumine.rb tables

@@ -31,8 +31,8 @@ module Database
 	end
 
 	# Run a query. If the query variable matches a file name in the queries directory (prefixing the .sql extension), the contents of that file are a query)
-	def query(query)
-	
+	def query(query, *params)
+  
 		# Connect to the database
 		db_connection = connect
 	
@@ -40,6 +40,9 @@ module Database
 		if File.file?("queries\\#{query}.sql")
 			file = File.open("queries\\#{query}.sql")
 			query = file.read
+      params[0].each_with_index do |param, index|
+        query.gsub! "@#{index}", param.to_s
+      end
 		end
 		
 		# Execute the query with some error handling
