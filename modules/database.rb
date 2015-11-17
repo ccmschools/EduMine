@@ -64,6 +64,7 @@ module Database
 		rescue DBI::DatabaseError => e
 			 puts "An error occurred"
 			 puts "Error message: #{e.errstr}"
+       raise 1 # Alert the operating system that there was an error
 			
 		# Regardless on if the query could be run or not, disconnect from the database
 		ensure
@@ -105,6 +106,7 @@ module Database
 			rescue DBI::DatabaseError => e
 				 puts "An error occurred"
 				 puts "Error message: #{e.errstr}" 
+         raise 1 # Alert the operating system that there was an error
 			end
 			
 		# Output a list of tables if no tables are specified
